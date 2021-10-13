@@ -1,6 +1,6 @@
 # Awesome AwesomeWM RC
 
-This is the default **awesome-git** `rc.lua`, but structured for better customization and modularity.
+This is the default **[awesome-git](https://awesomewm.org/apidoc/)** `rc.lua`, but structured for better customization and modularity.
 Initially, i did it for myself, because i needed something to start with,
 and i decided to share because i didn't find anything similar. 
 None of the logic was touched, but everything was reformatted to match the code style that i like.
