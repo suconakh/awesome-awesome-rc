@@ -5,6 +5,8 @@ Initially, i did it for myself, because i needed something to start with,
 and i decided to share because i didn't find anything similar. 
 None of the logic was touched, but everything was reformatted to match the code style that i like.
 
+Please note that this is for **[awesome-git](https://awesomewm.org/apidoc/)** and will not work with the stable release. 
+
 ## Structure
 
 The main `rc.lua` file only load the modules it was split into.
