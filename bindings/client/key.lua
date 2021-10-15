@@ -38,7 +38,7 @@ client.connect_signal('request::default_keybindings', function()
       awful.key{
          modifiers   = {mod.super},
          key         = 'o',
-         description = 'mmove to screen',
+         description = 'move to screen',
          group       = 'client',
          on_press    = function(c) c:move_to_screen() end,
       },
