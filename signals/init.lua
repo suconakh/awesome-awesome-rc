@@ -1,7 +1,7 @@
 return {
-   client  = require'signals.client',
    naughty = require'signals.naughty',
-   ruled   = require'signals.ruled',
-   screen  = require'signals.screen',
    tag     = require'signals.tag',
+   screen  = require'signals.screen',
+   client  = require'signals.client',
+   ruled   = require'signals.ruled',
 }
