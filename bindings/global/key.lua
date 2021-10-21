@@ -161,7 +161,7 @@ awful.keyboard.append_global_keybindings{
    },
    awful.key{
       modifiers   = {mod.super, mod.shift},
-      key         = 'j',
+      key         = 'k',
       description = 'swap with previous client by index',
       group       = 'client',
       on_press    = function() awful.client.swap.byidx(-1) end,
