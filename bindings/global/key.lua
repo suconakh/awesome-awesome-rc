@@ -23,7 +23,7 @@ awful.keyboard.append_global_keybindings{
       key         = 'w',
       description = 'show main menu',
       group       = 'awesome',
-      on_press    = function() widgets.mainmenu:show() end,
+      on_press    = function() widgets.menu.mainmenu:show() end,
    },
    awful.key{
       modifiers   = {mod.super, mod.ctrl},
