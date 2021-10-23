@@ -21,7 +21,9 @@ module | description
 `signals` | all signals are connected here
 `widgets` | all widgets are defined here
 
-The `widgets` module could be better structured, might redo it later.
+The `widgets` module is now better organized in this thread.
+Please note that the changes affected not only the `widgets` module,
+but also `bindings` and `signals`. 
 
 Feel free to submit PRs!
 
