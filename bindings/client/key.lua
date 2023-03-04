@@ -54,7 +54,7 @@ client.connect_signal('request::default_keybindings', function()
          key         = 'n',
          description = 'minimize',
          group       = 'client',
-         on_press    = function(c) c.minimized  = true end,
+         on_press    = function(c) c.minimized = true end,
       },
       awful.key{
          modifiers   = {mod.super},
