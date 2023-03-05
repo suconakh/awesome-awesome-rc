@@ -81,7 +81,7 @@ awful.keyboard.append_global_keybindings{
    awful.key{
       modifiers   = {mod.super},
       key         = 'Left',
-      description = 'view preivous',
+      description = 'view previous',
       group       = 'tag',
       on_press    = awful.tag.viewprev,
    },
@@ -135,6 +135,13 @@ awful.keyboard.append_global_keybindings{
       description = 'focus the next screen',
       group       = 'screen',
       on_press    = function() awful.screen.focus_relative(1) end,
+   },
+   awful.key{
+      modifiers   = {mod.super, mod.ctrl},
+      key         = 'k',
+      description = 'focus the previous screen',
+      group       = 'screen',
+      on_press    = function() awful.screen.focus_relative(-1) end,
    },
    awful.key{
       modifiers   = {mod.super, mod.ctrl},
@@ -206,14 +213,14 @@ awful.keyboard.append_global_keybindings{
       key         = 'h',
       description = 'increase the number of columns',
       group       = 'layout',
-      on_press    = function() awful.tag.incnmaster(1, nil, true) end,
+      on_press    = function() awful.tag.incncol(1, nil, true) end,
    },
    awful.key{
       modifiers   = {mod.super, mod.ctrl},
       key         = 'l',
       description = 'decrease the number of columns',
       group       = 'layout',
-      on_press    = function() awful.tag.incnmaster(-1, nil, true) end,
+      on_press    = function() awful.tag.incncol(-1, nil, true) end,
    },
    awful.key{
       modifiers   = {mod.super},
@@ -241,7 +248,7 @@ awful.keyboard.append_global_keybindings{
          local screen = awful.screen.focused()
          local tag = screen.tags[index]
          if tag then
-            tag:view_only(tag)
+            tag:view_only()
          end
       end
    },
@@ -254,7 +261,7 @@ awful.keyboard.append_global_keybindings{
          local screen = awful.screen.focused()
          local tag = screen.tags[index]
          if tag then
-            tag:viewtoggle(tag)
+            awful.tag.viewtoggle(tag)
          end
       end
    },
@@ -289,7 +296,7 @@ awful.keyboard.append_global_keybindings{
    awful.key{
       modifiers   = {mod.super},
       keygroup    = 'numpad',
-      description = 'select layout directrly',
+      description = 'select layout directly',
       group       = 'layout',
       on_press    = function(index)
          local tag = awful.screen.focused().selected_tag

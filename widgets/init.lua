@@ -13,7 +13,7 @@ _M.awesomemenu = {
    {'manual', apps.manual_cmd},
    {'edit config', apps.editor_cmd .. ' ' .. awesome.conffile},
    {'restart', awesome.restart},
-   {'quit', awesome.quit},
+   {'quit', function() awesome.quit() end},
 }
 
 _M.mainmenu = awful.menu{
@@ -124,7 +124,7 @@ function _M.create_tasklist(s)
          awful.button{
             modifiers = {},
             button    = 3,
-            on_press  = function() awful.menu.client_list{theme = {width = 250}}   end,
+            on_press  = function() awful.menu.client_list{theme = {width = 250}} end
          },
          awful.button{
             modifiers = {},
