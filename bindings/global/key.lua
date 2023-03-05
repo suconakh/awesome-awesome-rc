@@ -65,7 +65,7 @@ awful.keyboard.append_global_keybindings{
       key         = 'r',
       description = 'run prompt',
       group       = 'launcher',
-      on_press    = function() awful.screen.focused().promptbox:run() end,
+      on_press    = function() awful.screen.focused().widgets.promptbox:run() end,
    },
    awful.key{
       modifiers   = {mod.super},
