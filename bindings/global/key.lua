@@ -47,7 +47,7 @@ awful.keyboard.append_global_keybindings{
       on_press    = function()
          awful.prompt.run{
             prompt = 'Run Lua code: ',
-            textbox = awful.screen.focused().promptbox.widget,
+            textbox = awful.screen.focused().widgets.promptbox.widget,
             exe_callback = awful.util.eval,
             history_path = awful.util.get_cache_dir() .. '/history_eval'
          }
@@ -65,7 +65,7 @@ awful.keyboard.append_global_keybindings{
       key         = 'r',
       description = 'run prompt',
       group       = 'launcher',
-      on_press    = function() awful.screen.focused().promptbox:run() end,
+      on_press    = function() awful.screen.focused().widgets.promptbox:run() end,
    },
    awful.key{
       modifiers   = {mod.super},
